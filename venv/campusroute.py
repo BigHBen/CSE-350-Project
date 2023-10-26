@@ -1,7 +1,7 @@
 import gmplot
 import eel
 # Create the map plotter:
-apikey = 'AIzaSyBA6B-_RoICdotdXQ7u0LVDtFepx2D7ODg' # (your API key here)
+apikey = '' # (your API key here)
 gmap = gmplot.GoogleMapPlotter(38.216770, -85.755280, 14, apikey=apikey, map_type='hybrid')
 
 # Outline the Belknap Campus:
