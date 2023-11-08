@@ -1,0 +1,41 @@
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>Google Maps - gmplot</title>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=visualization&key=AIzaSyBA6B-_RoICdotdXQ7u0LVDtFepx2D7ODg"></script>
+<script type="text/javascript">
+    function initialize() {
+        var map = new google.maps.Map(document.getElementById("map_canvas"), {
+            mapTypeId: "hybrid",
+            zoom: 14,
+            center: new google.maps.LatLng(38.216901, -85.759215)
+        });
+
+        new google.maps.DirectionsService().route({
+            origin: new google.maps.LatLng(38.213223, -85.760789),
+            destination: new google.maps.LatLng(38.213462, -85.761228),
+            travelMode: "WALKING"
+        }, function(response, status) {
+            if (status == google.maps.DirectionsStatus.OK) {
+                new google.maps.DirectionsRenderer({map: map, suppressMarkers: true}).setDirections(response);
+            }
+        });
+
+        new google.maps.DirectionsService().route({
+            origin: new google.maps.LatLng(38.212905, -85.760263),
+            destination: new google.maps.LatLng(38.212672, -85.760633),
+            travelMode: "WALKING"
+        }, function(response, status) {
+            if (status == google.maps.DirectionsStatus.OK) {
+                new google.maps.DirectionsRenderer({map: map, suppressMarkers: true}).setDirections(response);
+            }
+        });
+
+    }
+</script>
+</head>
+<body style="margin:0px; padding:0px;" onload="initialize()">
+    <div id="map_canvas" style="width: 100%; height: 100%;" />
+</body>
+</html>

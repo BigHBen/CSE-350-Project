@@ -1,0 +1,85 @@
+<body onload="initialize()">
+   <!-- from index !-->
+   <link rel="stylesheet" href="../../static/style.css" />
+   <div>
+   <link href="../../static/index.css" rel="stylesheet" />
+   <div class="home-container">
+      <div class="home-main-row">
+         <div class="home-sidebar">
+            <nav class="home-content">
+               <div class="home-container1">
+                  <img
+                     alt="pastedImage"
+                     src="../../static/public/external/pastedimage-v7v-200w.png"
+                     class="home-cardinal-icon"
+                     />
+                  <h1 class="home-text">CardsBestRoute</h1>
+               </div>
+               <div class="home-start">
+                  <form action=/Form method="POST">
+                     <h1 class="home-text01">
+                        <span>Start:&nbsp;</span>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                     </h1>
+                     <div class="search-input">
+                        <input
+                           type="text"
+                           placeholder="Choose starting point.."
+                           class="home-textinput input"
+                           name="startpoint"
+                           />
+                        <div class="autocom-box">
+                           <li>Hi</li>
+                           <li>Hello</li>
+                           <li>How are you?</li>
+                        </div>
+                     </div>
+                     <h1 class="home-text07">
+                        <span>End:&nbsp; &nbsp;</span>
+                        <br />
+                        <span>&nbsp;</span>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                     </h1>
+                     <div class="search2-input">
+                        <input
+                           type="text"
+                           name="endpoint"
+                           placeholder="Choose destination.."
+                           class="home-search-button input"
+                           />
+                        <div class="autocom-box2">
+                           <li>Hi</li>
+                           <li>Hello</li>
+                           <li>How are you?</li>
+                        </div>
+                     </div>
+                     <button id="searchbutton" type="submit" class="home-button button">
+                     <span>
+                     <span>Search</span>
+                     <br />
+                     </span>
+                     </button>
+                  </form>
+               </div>
+            </nav>
+            <nav class="home-credits">
+            <span class="home-text18">Hilton Benson</span>
+            <span class="home-text19">Morgan Taylor</span>
+            <span class="home-text20">Emujin Zolbayar</span>
+            <span class="home-text21">Hadey Chaker&nbsp;</span>
+            </nav>
+            </div>
+            <div class="map_canvas" id="map_canvas" ></div>
+         </div>
+      </div>
+   </div>
+   <script src="{{ url_for('static', filename='suggestions.js') }}"></script>
+   <script src="{{ url_for('static', filename='script.js') }}"></script>
+   <script src="{{ url_for('static', filename='script2.js') }}"></script>
+</body>

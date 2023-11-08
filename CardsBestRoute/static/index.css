@@ -1,0 +1,207 @@
+.home-container {
+}
+
+.home-main-row {
+  width: 100vw;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+}
+.home-sidebar {
+  padding:1rem;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #282424;
+}
+.home-content {
+  flex: 0 0 auto;
+  width: 347px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.home-container1 {
+  width: 356px;
+  height: 65px;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10%;
+}
+.home-cardinal-icon {
+  width: var(--dl-size-size-small);
+}
+.home-text {
+  color: var(--dl-color-gray-white);
+  align-self: center;
+  margin-left: var(--dl-space-space-unit);
+  margin-bottom: 0;
+}
+.home-start {
+  width: 100%;
+  display: flex;
+  align-self: center;
+  align-items: flex-start;
+  margin-bottom: var(--dl-space-space-twounits);
+}
+.home-text01 {
+  color: var(--dl-color-gray-white);
+  width: 100px;
+  height: var(--dl-size-size-small);
+  align-self: center;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+.home-textinput {
+  width: 2365px;
+  height: 51px;
+  border-width: 0;
+  border-radius: var(--dl-radius-radius-radius8);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.home-end {
+  width: 100%;
+  display: flex;
+  align-self: center;
+  align-items: flex-start;
+  margin-bottom: var(--dl-space-space-twounits);
+}
+.home-text07 {
+  color: var(--dl-color-gray-white);
+  width: 100px;
+  height: var(--dl-size-size-small);
+  align-self: center;
+  margin-left: 0;
+  margin-right: 0;
+}
+/*Search Button*/
+.home-search-button {
+  width: 265px;
+  height: 51px;
+  border-width: 0;
+  border-radius: var(--dl-radius-radius-radius8);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: var(--dl-space-space-unit);
+}
+.home-button {
+  width: 100%;
+  height: 47px;
+  align-self: center;
+  border-style: solid;
+  border-width: 0;
+  border-radius: var(--dl-radius-radius-radius8);
+  margin-top: var(--dl-space-space-unit);
+  margin-bottom: 10%;
+}
+.home-credits {
+  flex: 0 0 auto;
+  width: 280px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.home-text18 {
+  color: var(--dl-color-gray-white);
+  font-size: 20px;
+  margin-bottom: var(--dl-space-space-unit);
+}
+
+/* For name text in credits (*/
+.home-text18, .home-text19, .home-text20 {
+  color: var(--dl-color-gray-white);
+  font-size: 10px;
+  margin-bottom: var(--dl-space-space-halfunit);
+}
+
+.home-text21 { color: var(--dl-color-gray-white); font-size: 10px; margin-bottom: 0}
+
+/* Google Map (*/
+.map_canvas {
+  padding:1rem;
+}
+
+body,html {
+  margin:0;
+  height: 100vh;
+}
+body {
+  display: flex;
+  justify-content: left;
+}
+
+.search-input, .search2-input {
+  width: 130%;
+  margin-bottom: var(--dl-space-space-unit);
+}
+
+.search-input .autocom-box { /*should be just .search-input*/
+  width: 318px;
+  background: #FFFFFF;
+  border-radius: var(--dl-radius-radius-radius8);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+
+  box-shadow: 0 1px 5px 3px rgba(0,0,0,0.12);
+  position: absolute;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.search2-input .autocom-box2 {
+  width: 318px;
+  background: #FFFFFF;
+  border-radius: var(--dl-radius-radius-radius8);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+
+  box-shadow: 0 1px 5px 3px rgba(0,0,0,0.12);
+  position: absolute;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  margin-top: -16px;
+}
+
+.search-input input, .search2-input input {
+  padding: 0;
+  max-height: 280px;
+  overflow-y: auto;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: var(--dl-radius-radius-radius8);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  font-size: 18px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.search-input.active .autocom-box,.search2-input.active .autocom-box2{
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.search-input.active .autocom-box li,.search2-input.active .autocom-box2 li{
+  display: block;
+}
+
+.autocom-box li,.autocom-box2 li {
+  list-style: none;
+  padding:8px 12px;
+  width: 100%;
+  cursor: default;
+  border-radius: var(--dl-radius-radius-radius8);
+  display: none;
+}
+
+
+
+.autocom-box li:hover,.autocom-box2 li:hover{
+  background: #EFEFEF;
+}

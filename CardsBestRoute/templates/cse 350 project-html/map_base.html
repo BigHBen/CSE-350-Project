@@ -1,0 +1,143 @@
+<html lang="">
+<head>
+<title>CSE 350 Project</title>
+<meta property="og:title" content="CSE 350 Project" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="utf-8" />
+<meta property="twitter:card" content="summary_large_image" />
+<style media="all">
+   html, body{height:100%;}
+
+   /* for IE 6, if you care */
+   body, p { margin:0; padding:0}
+</style>
+<!-- Add homepage css !-->
+<style data-tag="reset-style-sheet">
+   html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+</style>
+<style data-tag="default-style-sheet">
+   html {
+   font-family: Inter;
+   font-size: 16px;
+   }
+   body {
+   font-weight: 400;
+   font-style:normal;
+   text-decoration: none;
+   text-transform: none;
+   letter-spacing: normal;
+   line-height: 1.15;
+   color: var(--dl-color-gray-black);
+   background-color: var(--dl-color-gray-white);
+   }
+</style>
+<link
+   rel="stylesheet"
+   href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+   data-tag="font"
+   />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>Google Maps - gmplot</title>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=visualization&key=AIzaSyBA6B-_RoICdotdXQ7u0LVDtFepx2D7ODg"></script>
+<script type="text/javascript">
+    function initialize() {
+        var map = new google.maps.Map(document.getElementById("map_canvas"), {
+            mapTypeId: "hybrid",
+            zoom: 14,
+            center: new google.maps.LatLng(38.216770, -85.755280)
+        });
+
+        var marker_icon_6495ED = {
+            url: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAiCAYAAACwaJKDAAAABmJLR0QA/wD/AP+gvaeTAAADFUlEQVRIia2VW0gUYRiGn91lrGwj0qCsbS9qpZN5UaFlUQmF1IUURN0FkVFeSEQgdBcZBN10hEqipLoxjKjoXG5ZFh6y8tBKanmazLRd0t1Wx935u3AG121tx9X35me+/32f4eP//hkT/9dyYD0wHzADKiADb4CGKNl/tBmoBIQ1wSbsKVnCkbZL2FOyhDXBJgCh7W+OFDZFeD6JyZS/aOUOU+qWPBJtK8A02varo5baZ+dpqbkjEOIUcFR70T9QE3Bammo9lLm3EHtKVtR22use4yw6wNCA9yxwWAdbQjyHLNKUY1vzbjN/8caoQICZcxwkJWfQUl2yRqhBD1ARCp0H3E3bfkxauGqHIaAu6ywbUlw8na7SDUAR0G/W9nKtCQvil2/aPy6grmUbc5iRaI8HcmF4TACyk9N3Y7ZIMUHNFglH+m6AbB1qAZYkJa+LCagryZEBsASwmAEJiJs+yzYhqJaPAyTzSFmMYTeqkbwZUADF6+6YEFLLK4Ci32dXV1P5hKBa3gWoevv3miqKUQNKTEA1OERTRTHAPRgZqYs+j+ytd16KCdrgvIzPI3uBizByo7xAf1fzu21zHWuZkWg3DPzR/JayG3kINXgEKA2FAlQKNZjQ+vF+um1pJvEz50YF9nbU8ujCTgLKn3PAcb1uCfM9UQNKcnv90xWLVu9EmmodEzjoc/PgTDYD3t5bQE7onjnMK4CcP79/1JXdzAMx9uyWF+fj88hfgH2EDXk4FMAP7On8/CLQXF0SESg3vuLr+zsA+xk+j1GKBAX4CFyqultAMDAY1oug+v4JgBKgLFJ4LChAgc8j+5srb40qdjWV09NaIwg5mPFAfwLXG15eGVV0vb4Gw6NTFwsUoNAt1+OWh//Gir+PtrpHAFf/F4oGrQG+tH16CECnq5Tg0KAf7TrGCgV4IDe+BEB2OQGcRDjx8UKdPW0fUAOK/iV6Hi1gBFoVDAzS/a2Kvt5WgHcGMobUk5J5UAABYNpkQatmL0gVQIsRs5H2AXq11tsmE+pW/H0A/ZMJ7dbW75MJ7dLWViPmv887IG8sMF4/AAAAAElFTkSuQmCC",
+            labelOrigin: new google.maps.Point(10, 11)
+        };
+    }
+</script>
+</head>
+<body onload="initialize()">
+   <!-- from index !-->
+   <link rel="stylesheet" href="../../static/style.css" />
+   <div>
+   <link href="../../static/index.css" rel="stylesheet" />
+   <div class="home-container">
+      <div class="home-main-row">
+         <div class="home-sidebar">
+            <nav class="home-content">
+               <div class="home-container1">
+                  <img
+                     alt="pastedImage"
+                     src="../../static/public/external/pastedimage-v7v-200w.png"
+                     class="home-cardinal-icon"
+                     />
+                  <h1 class="home-text">CardsBestRoute</h1>
+               </div>
+               <div class="home-start">
+                  <form action=/Form method="POST">
+                     <h1 class="home-text01">
+                        <span>Start:&nbsp;</span>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                     </h1>
+                     <div class="search-input">
+                        <input
+                           type="text"
+                           placeholder="Choose starting point.."
+                           class="home-textinput input"
+                           name="startpoint"
+                           />
+                        <div class="autocom-box">
+                           <li>Hi</li>
+                           <li>Hello</li>
+                           <li>How are you?</li>
+                        </div>
+                     </div>
+                     <h1 class="home-text07">
+                        <span>End:&nbsp; &nbsp;</span>
+                        <br />
+                        <span>&nbsp;</span>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                     </h1>
+                     <div class="search2-input">
+                        <input
+                           type="text"
+                           name="endpoint"
+                           placeholder="Choose destination.."
+                           class="home-search-button input"
+                           />
+                        <div class="autocom-box2">
+                           <li>Hi</li>
+                           <li>Hello</li>
+                           <li>How are you?</li>
+                        </div>
+                     </div>
+                     <button id="searchbutton" type="submit" class="home-button button">
+                     <span>
+                     <span>Search</span>
+                     <br />
+                     </span>
+                     </button>
+                  </form>
+               </div>
+            </nav>
+            <nav class="home-credits">
+            <span class="home-text18">Hilton Benson</span>
+            <span class="home-text19">Morgan Taylor</span>
+            <span class="home-text20">Emujin Zolbayar</span>
+            <span class="home-text21">Hadey Chaker&nbsp;</span>
+            </nav>
+            </div>
+            <div class="map_canvas" id="map_canvas" ></div>
+         </div>
+      </div>
+   </div>
+   <script src="{{ url_for('static', filename='suggestions.js') }}"></script>
+   <script src="{{ url_for('static', filename='script.js') }}"></script>
+   <script src="{{ url_for('static', filename='script2.js') }}"></script>
+</body>
+</html>
