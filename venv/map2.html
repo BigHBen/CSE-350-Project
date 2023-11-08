@@ -31,6 +31,16 @@
             strokeWeight: 7,
             map: map,
             path: [
+                new google.maps.LatLng(38.213223, -85.760789),
+                new google.maps.LatLng(38.213309, -85.760778),
+                new google.maps.LatLng(38.213309, -85.760778),
+                new google.maps.LatLng(38.213334, -85.760974),
+                new google.maps.LatLng(38.213334, -85.760974),
+                new google.maps.LatLng(38.213339, -85.761081),
+                new google.maps.LatLng(38.213339, -85.761081),
+                new google.maps.LatLng(38.213358, -85.761250),
+                new google.maps.LatLng(38.213358, -85.761250),
+                new google.maps.LatLng(38.213462, -85.761228),
             ]
         });
 
@@ -42,6 +52,16 @@
             strokeWeight: 7,
             map: map,
             path: [
+                new google.maps.LatLng(38.213223, -85.760789),
+                new google.maps.LatLng(38.213309, -85.760778),
+                new google.maps.LatLng(38.213309, -85.760778),
+                new google.maps.LatLng(38.213334, -85.760974),
+                new google.maps.LatLng(38.213334, -85.760974),
+                new google.maps.LatLng(38.213388, -85.761014),
+                new google.maps.LatLng(38.213388, -85.761014),
+                new google.maps.LatLng(38.213421, -85.761078),
+                new google.maps.LatLng(38.213421, -85.761078),
+                new google.maps.LatLng(38.213462, -85.761228),
             ]
         });
 
@@ -719,18 +739,8 @@
         });
 
         new google.maps.DirectionsService().route({
-            origin: new google.maps.LatLng(38.216812, -85.759880),
-            destination: new google.maps.LatLng(38.216183, -85.760869),
-            travelMode: "WALKING"
-        }, function(response, status) {
-            if (status == google.maps.DirectionsStatus.OK) {
-                new google.maps.DirectionsRenderer({map: map}).setDirections(response);
-            }
-        });
-
-        new google.maps.DirectionsService().route({
-            origin: new google.maps.LatLng(38.214197, -85.760980),
-            destination: new google.maps.LatLng(38.214599, -85.761274),
+            origin: new google.maps.LatLng(38.213223, -85.760789),
+            destination: new google.maps.LatLng(38.213462, -85.761228),
             travelMode: "WALKING"
         }, function(response, status) {
             if (status == google.maps.DirectionsStatus.OK) {

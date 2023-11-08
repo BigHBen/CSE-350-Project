@@ -135,12 +135,12 @@ def getEdge(path):
     return distance_sum
 
 
-def edges(df):
+def edges(df):  # Not necessary
     edge_list = (df["start-node"].tolist(), df["end-node"].tolist())
     return edge_list
 
 
-def update_csv(df, file_name):
+def update_csv(df, file_name):  # Not necessary
     print("Overwriting " + file_name)
     df.to_csv(file_name, index=False, header=True, encoding='utf-8-sig')
 
@@ -184,8 +184,8 @@ def DrawRoute(path1, path2):
 def draw_route():
     # Use without custom matrix
     gmap.directions(
-        (38.2141971,-85.7609798),
-        (38.2145993,-85.7612737),
+        (38.2141971, -85.7609798),
+        (38.2145993, -85.7612737),
         travel_mode='Walking'
     )
     gmap.draw(map_file)
@@ -218,11 +218,14 @@ def change_html(html):
     with open(html, 'r') as file:  # r to open file in READ mode
         html_as_string = file.read()
     html_file = open(html, 'w')
+    add_eel = '<script src="/eel.js"></script>'
     add_sidebar = '<div id="map_canvas" style="width: 70%; height: 100%;" /></div>' + '\n' + sidebar
+    # Change map position
     change_map_position = html_as_string.replace(
         '<div id="map_canvas" style="width: 100%; height: 100%;" />',
         '<div id="map_canvas" style="width: 100%; height: 100%; margin: 100px 40% 24px 60%;" />'
     )
+    # Add sidebar content to body section
     substituted_phrase = html_as_string.replace(
         '<div id="map_canvas" style="width: 100%; height: 100%;" />',
         add_sidebar
@@ -234,6 +237,5 @@ def change_html(html):
     return soup2
 
 
-print(change_html(map_file))
 eel.init('')
-#eel.start(map_file)  # Uncomment for a bunch of errors
+# eel.start(map_file)  # Uncomment for a bunch of errors

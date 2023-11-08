@@ -12,10 +12,12 @@ from geopy.distance import lonlat, distance
 from ast import literal_eval as make_tuple
 
 
+
 def find_all_paths(graph, start, end):
     path = []
     paths = []
     queue = [(start, end, path)]
+    print(graph)
     while queue:
         start, end, path = queue.pop()
         # print('PATH', path)
@@ -25,6 +27,7 @@ def find_all_paths(graph, start, end):
             paths.append(path)
         for node in set(graph[start]).difference(path):
             queue.append((node, end, path))
+    print(paths)
     return paths
 
 
@@ -97,4 +100,4 @@ output_path2 = getattr(solution2[1], "pathstring")
 output_paths = (output_path1, output_path2)
 print(output.format(*output_paths))
 pg.DrawRoute(solution2[0], solution2[1])
-pg.draw_route()  # No custom matrix
+#pg.draw_route()  # No custom matrix
