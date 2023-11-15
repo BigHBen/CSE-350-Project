@@ -1,5 +1,7 @@
 /venv/
-.idea
+.idea/
 CardsBestRoute/.idea
+CardsBestRoute/Datasets/campus_matrix.csv
 campus_matrix.csv
 map.html
+CardsBestRoute/templates/cse 350 project-html/map.html
