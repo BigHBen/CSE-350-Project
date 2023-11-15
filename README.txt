@@ -7,5 +7,5 @@ Setup for CardsBestRoute:
 5) Enable newly created interpreter
 6) Reload project
 7) Check pip functionality via terminal (type 'pip')
-8) Install missing packages
+8) Install missing packages (found on main.py)
 9) Run 'main.py' for testing
