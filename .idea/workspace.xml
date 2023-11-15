@@ -4,11 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6ec282f-cbe6-4799-9ede-5edc465e2b59" name="Changes" comment="" />
+    <list default="true" id="e6ec282f-cbe6-4799-9ede-5edc465e2b59" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/CSE-350-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CSE-350-Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CardsBestRoute/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CardsBestRoute/.idea/CardsBestRoute.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CardsBestRoute/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CardsBestRoute/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CardsBestRoute/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CardsBestRoute/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CardsBestRoute/.idea/vcs.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,6 +58,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HDBEN\Documents\GitHub Projects\CSE-350-Project" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -54,10 +76,27 @@
       <workItem from="1699472012854" duration="94000" />
       <workItem from="1699472868967" duration="32000" />
       <workItem from="1699483637664" duration="81000" />
+      <workItem from="1700005963044" duration="9000" />
+      <workItem from="1700005986983" duration="71000" />
+      <workItem from="1700006061230" duration="23000" />
+      <workItem from="1700006087276" duration="10000" />
+      <workItem from="1700006163403" duration="149000" />
+      <workItem from="1700006332517" duration="313000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
