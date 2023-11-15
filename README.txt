@@ -4,7 +4,8 @@ Setup for CardsBestRoute:
 2) Open project
 3) Click interpreter at bottom right of screen
 4) Add new interpreter -> add local -> new environment
-5) Reload project
-6) Check pip functionality via terminal (type 'pip')
-7) Install missing packages
-8) Run 'main.py' for testing
+5) Enable newly created interpreter
+6) Reload project
+7) Check pip functionality via terminal (type 'pip')
+8) Install missing packages
+9) Run 'main.py' for testing

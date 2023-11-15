@@ -7,6 +7,12 @@ from threading import Timer
 import sys
 import map_driver
 from elasticsearch import Elasticsearch
+import networkx as nx  # For pathfinding
+import pandas as pd
+import gmplot  # Google Maps API
+import numpy as np  # To create distance matrix for routes
+import geopy.distance  # To calculate distances between coordinates
+from bs4 import BeautifulSoup  # Install beautifulsoup4 package
 # ^^ Start using all the regular flask logic ^^
 
 app = Flask(__name__)  # Initiate flask app
