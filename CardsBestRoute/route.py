@@ -9,6 +9,8 @@ from geopy.distance import lonlat, distance  # Distance calculator
 from bs4 import BeautifulSoup  # For modifying HTML's
 from html.parser import HTMLParser
 import math
+import requests
+import json
 
 # Create the map plotter:
 apikey = open("Datasets/apikey.txt", "r").read()  # (your API key here)
@@ -137,6 +139,7 @@ def DrawRoute(path1, path2, map_file):
     gmap.draw(map_file)
     # print(getattr(path1, "coords"))
     Map_Changes(map_file)
+    DirectionsJSON(p1)
 
 
 # Make additions to map.html
@@ -157,4 +160,28 @@ def Map_Changes(html):
     )
     html_file = open(html, 'w')
     html_file.write(finished_string)
+
+
+def DirectionsJSON(p):
+    separator = ', '
+    origin = separator.join([str(p[0][0]), str(p[0][1])])
+    destination = separator.join([str(p[-1][0]), str(p[-1][1])])
+
+    JSONDirections = requests.get(
+        "https://maps.googleapis.com/maps/api/directions/json" +
+        "?destination=" + destination +
+        "&origin=" + origin +
+        "&mode=walking" +
+        "&key=" + apikey)
+
+    d = json.loads(JSONDirections.content)  # Add directions.json to json file
+    with open('templates/cse 350 project-html/directions.json', 'w') as fp:
+        json.dump(d, fp, indent=2)
+
+    f = open('templates/cse 350 project-html/directions.json')
+    data = json.load(f)  # returns JSON object as a dictionary
+    dist = data['routes'][0]['legs'][0]['distance']['text']
+    duration = data['routes'][0]['legs'][0]['duration']['text']
+    f.close()  # Closing file
+    print("Your walk will cover " + dist + " and will take a total time of " + duration + ".")
 
