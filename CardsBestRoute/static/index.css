@@ -5,13 +5,14 @@
   width: 100vw;
   height: 100%;
   display: grid;
-  grid-template-columns: 0.5fr 1fr;
+  grid-template-columns: 375px 1fr;
 }
 .home-sidebar {
   padding:1rem;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  flex-basis: 0%;
   justify-content: space-between;
   background-color: #282424;
 }
@@ -44,7 +45,7 @@
   display: flex;
   align-self: center;
   align-items: flex-start;
-  margin-bottom: var(--dl-space-space-twounits);
+  margin-bottom: var(--dl-space-space-halfunit);
 }
 .home-text01 {
   color: var(--dl-color-gray-white);
@@ -99,7 +100,7 @@
 }
 .home-credits {
   flex: 0 0 auto;
-  width: 280px;
+  width: 300px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -204,4 +205,11 @@ body {
 
 .autocom-box li:hover,.autocom-box2 li:hover{
   background: #EFEFEF;
+}
+
+.results {
+  width: 350px;
+  height: 51px;
+  color: var(--dl-color-gray-white); font-size: 20px; margin-bottom: 0;
+  position: static;
 }

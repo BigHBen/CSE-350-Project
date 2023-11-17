@@ -9,9 +9,10 @@
     },
     {
       "geocoder_status": "OK",
-      "place_id": "ChIJ904vEGQNaYgR6dsmZDRiyJU",
+      "place_id": "ChIJA7YqB2QNaYgRrfl6t-q5-Lc",
       "types": [
-        "street_address"
+        "establishment",
+        "point_of_interest"
       ]
     }
   ],
@@ -19,29 +20,29 @@
     {
       "bounds": {
         "northeast": {
-          "lat": 38.2133502,
+          "lat": 38.213454,
           "lng": -85.76077409999999
         },
         "southwest": {
-          "lat": 38.2129608,
-          "lng": -85.76130169999999
+          "lat": 38.2132987,
+          "lng": -85.76121859999999
         }
       },
       "copyrights": "Map data \u00a92023 Google",
       "legs": [
         {
           "distance": {
-            "text": "390 ft",
-            "value": 119
+            "text": "144 ft",
+            "value": 44
           },
           "duration": {
-            "text": "2 mins",
-            "value": 98
+            "text": "1 min",
+            "value": 35
           },
-          "end_address": "132 Eastern Pkwy, Louisville, KY 40208, USA",
+          "end_address": "332 Eastern Pkwy, Louisville, KY 40208, USA",
           "end_location": {
-            "lat": 38.2129608,
-            "lng": -85.76084329999999
+            "lat": 38.213454,
+            "lng": -85.76121859999999
           },
           "start_address": "220 Eastern Pkwy, Louisville, KY 40208, USA",
           "start_location": {
@@ -51,20 +52,20 @@
           "steps": [
             {
               "distance": {
-                "text": "135 ft",
-                "value": 41
+                "text": "49 ft",
+                "value": 15
               },
               "duration": {
                 "text": "1 min",
-                "value": 34
+                "value": 12
               },
               "end_location": {
-                "lat": 38.2133502,
-                "lng": -85.7612407
+                "lat": 38.2133207,
+                "lng": -85.7609408
               },
               "html_instructions": "Head <b>west</b>",
               "polyline": {
-                "points": "cpfhFxcmjOARALEz@"
+                "points": "cpfhFxcmjOARAL"
               },
               "start_location": {
                 "lat": 38.2132987,
@@ -74,49 +75,25 @@
             },
             {
               "distance": {
-                "text": "125 ft",
-                "value": 38
+                "text": "95 ft",
+                "value": 29
               },
               "duration": {
                 "text": "1 min",
-                "value": 31
+                "value": 23
               },
               "end_location": {
-                "lat": 38.21300919999999,
-                "lng": -85.76130169999999
+                "lat": 38.213454,
+                "lng": -85.76121859999999
               },
-              "html_instructions": "Turn <b>left</b>",
-              "maneuver": "turn-left",
+              "html_instructions": "Slight <b>right</b>",
+              "maneuver": "turn-slight-right",
               "polyline": {
-                "points": "mpfhFvfmjOXBh@F"
+                "points": "gpfhFzdmjOKLCDABAFADCP"
               },
               "start_location": {
-                "lat": 38.2133502,
-                "lng": -85.7612407
-              },
-              "travel_mode": "WALKING"
-            },
-            {
-              "distance": {
-                "text": "131 ft",
-                "value": 40
-              },
-              "duration": {
-                "text": "1 min",
-                "value": 33
-              },
-              "end_location": {
-                "lat": 38.2129608,
-                "lng": -85.76084329999999
-              },
-              "html_instructions": "Turn <b>left</b><div style=\"font-size:0.9em\">Destination will be on the right</div>",
-              "maneuver": "turn-left",
-              "polyline": {
-                "points": "infhFbgmjOH{A"
-              },
-              "start_location": {
-                "lat": 38.21300919999999,
-                "lng": -85.76130169999999
+                "lat": 38.2133207,
+                "lng": -85.7609408
               },
               "travel_mode": "WALKING"
             }
@@ -126,7 +103,7 @@
         }
       ],
       "overview_polyline": {
-        "points": "cpfhFxcmjOC`@Ez@XBh@FH{A"
+        "points": "cpfhFxcmjOC`@ORIb@"
       },
       "summary": "",
       "warnings": [

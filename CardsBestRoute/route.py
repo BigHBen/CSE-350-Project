@@ -164,6 +164,7 @@ def Map_Changes(html):
 
 def DirectionsJSON(p):
     separator = ', '
+    map_html = 'templates/cse 350 project-html/map.html'
     origin = separator.join([str(p[0][0]), str(p[0][1])])
     destination = separator.join([str(p[-1][0]), str(p[-1][1])])
 
@@ -183,5 +184,17 @@ def DirectionsJSON(p):
     dist = data['routes'][0]['legs'][0]['distance']['text']
     duration = data['routes'][0]['legs'][0]['duration']['text']
     f.close()  # Closing file
+    s = str("Your walk will cover " + dist + " and will take a total time of " + duration + ".")
+
+    #Add distance and duration to html
+    with open(map_html, 'r') as file:  # r to open file in READ mode
+        html_as_string = file.read()
+        map_content = html_as_string
+        replaced_content = '<div class="results">' + s + '</div>'
+        map_content = map_content.replace(
+            '<div class="results">Sup</div>',
+            replaced_content
+        )
+    open(map_html, 'w').write(map_content)
     print("Your walk will cover " + dist + " and will take a total time of " + duration + ".")
 
