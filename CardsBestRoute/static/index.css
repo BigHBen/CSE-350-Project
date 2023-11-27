@@ -5,14 +5,14 @@
   width: 100vw;
   height: 100%;
   display: grid;
-  grid-template-columns: 375px 1fr;
+  grid-template-columns: 400px 1fr;
 }
 .home-sidebar {
   padding:1rem;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  flex-basis: 0%;
+  flex-basis: 0;
   justify-content: space-between;
   background-color: #282424;
 }
@@ -38,6 +38,7 @@
   color: var(--dl-color-gray-white);
   align-self: center;
   margin-left: var(--dl-space-space-unit);
+  margin-right: var(--dl-space-space-unit);
   margin-bottom: 0;
 }
 .home-start {
@@ -212,4 +213,61 @@ body {
   height: 51px;
   color: var(--dl-color-gray-white); font-size: 20px; margin-bottom: 0;
   position: static;
+}
+
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width:100px;
+  height:50px;
+  background:#FFFFFF;
+  border-radius:var(--dl-radius-radius-radius8);
+  color:#282424;font-size:20px;margin-bottom:0;
+  text-align:center;
+  padding:12px;
+  align-self:center;
+  margin-left:var(--dl-space-space-unit);
+  margin-right:var(--dl-space-space-unit);
+
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 65vw;
+  height: 80vh;
+  background:darkslategray;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+.popup-textlist li {
+  margin-left: var(--dl-space-space-unit);
+  margin-top: var(--dl-space-space-halfunit);
+}
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
 }

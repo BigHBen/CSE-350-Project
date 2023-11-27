@@ -14,6 +14,15 @@
                      class="home-cardinal-icon"
                      />
                   <h1 class="home-text">CardsBestRoute</h1>
+                  <div class="popup" onclick="myFunction()">Steps
+                    <span class="popuptext" id="myPopup">
+                        <div class="popup-textlist">
+                           <ol>
+                               <li>Step1</li>
+                           </ol>
+                        </div>
+                    </span>
+                  </div>
                </div>
                <div class="home-start">
                   <form action=/Form method="POST">
@@ -81,4 +90,11 @@
    <script src="{{ url_for('static', filename='script.js') }}"></script>
    <script src="{{ url_for('static', filename='script2.js') }}"></script>
    <script src="{{ url_for('static', filename='script3.js') }}"></script>
+   <script>
+        // When the user clicks on <div>, open the popup
+        function myFunction() {
+          var popup = document.getElementById("myPopup");
+          popup.classList.toggle("show");
+        }
+   </script>
 </body>

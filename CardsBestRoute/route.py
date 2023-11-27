@@ -183,18 +183,33 @@ def DirectionsJSON(p):
     data = json.load(f)  # returns JSON object as a dictionary
     dist = data['routes'][0]['legs'][0]['distance']['text']
     duration = data['routes'][0]['legs'][0]['duration']['text']
+
+    current_dist, steps, instructions = [], [], []
+    for value in data['routes'][0]['legs'][0]['steps']:
+        current_dist.append(value['distance']['text'])
+        steps.append(value['html_instructions'])
+    for i in range(len(steps)):
+        step_string = str(steps[i] + " " + current_dist[i])
+        step_string = "<li>{0}</li>".format(step_string)
+        instructions.append(step_string)
     f.close()  # Closing file
     s = str("Your walk will cover " + dist + " and will take a total time of " + duration + ".")
 
-    #Add distance and duration to html
+    # Add results to html
     with open(map_html, 'r') as file:  # r to open file in READ mode
         html_as_string = file.read()
         map_content = html_as_string
         replaced_content = '<div class="results">' + s + '</div>'
+        replaced_steps = '\n'.join(instructions)
+        print(replaced_steps)
         map_content = map_content.replace(
             '<div class="results">Sup</div>',
             replaced_content
         )
+        step_content = map_content.replace(
+            '<li>Step1</li>',
+            replaced_steps
+        )
     open(map_html, 'w').write(map_content)
+    open(map_html, 'w').write(step_content)
     print("Your walk will cover " + dist + " and will take a total time of " + duration + ".")
-

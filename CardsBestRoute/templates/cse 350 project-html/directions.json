@@ -9,10 +9,9 @@
     },
     {
       "geocoder_status": "OK",
-      "place_id": "ChIJA7YqB2QNaYgRrfl6t-q5-Lc",
+      "place_id": "ChIJO5bum2cNaYgRwqoq9ATzuCk",
       "types": [
-        "establishment",
-        "point_of_interest"
+        "street_address"
       ]
     }
   ],
@@ -20,29 +19,29 @@
     {
       "bounds": {
         "northeast": {
-          "lat": 38.213454,
-          "lng": -85.76077409999999
+          "lat": 38.218133,
+          "lng": -85.759024
         },
         "southwest": {
-          "lat": 38.2132987,
-          "lng": -85.76121859999999
+          "lat": 38.2132789,
+          "lng": -85.76077409999999
         }
       },
       "copyrights": "Map data \u00a92023 Google",
       "legs": [
         {
           "distance": {
-            "text": "144 ft",
-            "value": 44
+            "text": "0.4 mi",
+            "value": 681
           },
           "duration": {
-            "text": "1 min",
-            "value": 35
+            "text": "10 mins",
+            "value": 588
           },
-          "end_address": "332 Eastern Pkwy, Louisville, KY 40208, USA",
+          "end_address": "2010 S 1st St, Louisville, KY 40208, USA",
           "end_location": {
-            "lat": 38.213454,
-            "lng": -85.76121859999999
+            "lat": 38.218133,
+            "lng": -85.759024
           },
           "start_address": "220 Eastern Pkwy, Louisville, KY 40208, USA",
           "start_location": {
@@ -52,20 +51,20 @@
           "steps": [
             {
               "distance": {
-                "text": "49 ft",
-                "value": 15
+                "text": "56 ft",
+                "value": 17
               },
               "duration": {
                 "text": "1 min",
-                "value": 12
+                "value": 13
               },
               "end_location": {
-                "lat": 38.2133207,
-                "lng": -85.7609408
+                "lat": 38.2132789,
+                "lng": -85.7605861
               },
-              "html_instructions": "Head <b>west</b>",
+              "html_instructions": "Head <b>east</b>",
               "polyline": {
-                "points": "cpfhFxcmjOARAL"
+                "points": "cpfhFxcmjO@U@M"
               },
               "start_location": {
                 "lat": 38.2132987,
@@ -75,25 +74,169 @@
             },
             {
               "distance": {
-                "text": "95 ft",
-                "value": 29
+                "text": "148 ft",
+                "value": 45
               },
               "duration": {
                 "text": "1 min",
-                "value": 23
+                "value": 36
               },
               "end_location": {
-                "lat": 38.213454,
-                "lng": -85.76121859999999
+                "lat": 38.2134392,
+                "lng": -85.7602193
               },
-              "html_instructions": "Slight <b>right</b>",
-              "maneuver": "turn-slight-right",
+              "html_instructions": "Slight <b>left</b> toward <b>Eastern Pkwy</b>",
+              "maneuver": "turn-slight-left",
               "polyline": {
-                "points": "gpfhFzdmjOKLCDABAFADCP"
+                "points": "_pfhFtbmjOEECE?AACAGAMAMCKIG"
               },
               "start_location": {
-                "lat": 38.2133207,
-                "lng": -85.7609408
+                "lat": 38.2132789,
+                "lng": -85.7605861
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "82 ft",
+                "value": 25
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 20
+              },
+              "end_location": {
+                "lat": 38.2134124,
+                "lng": -85.75995259999999
+              },
+              "html_instructions": "Turn <b>right</b> onto <b>Eastern Pkwy</b>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "_qfhFj`mjO?EDo@"
+              },
+              "start_location": {
+                "lat": 38.2134392,
+                "lng": -85.7602193
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "26 ft",
+                "value": 8
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 27
+              },
+              "end_location": {
+                "lat": 38.2135741,
+                "lng": -85.75992749999999
+              },
+              "html_instructions": "Turn <b>left</b> toward <b>Eastern Pkwy</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "ypfhFt~ljOMAQA"
+              },
+              "start_location": {
+                "lat": 38.2134124,
+                "lng": -85.75995259999999
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "171 ft",
+                "value": 52
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 64
+              },
+              "end_location": {
+                "lat": 38.2135793,
+                "lng": -85.7593359
+              },
+              "html_instructions": "Turn <b>right</b> onto <b>Eastern Pkwy</b>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "yqfhFp~ljO?IDw@@O?MGQAC"
+              },
+              "start_location": {
+                "lat": 38.2135741,
+                "lng": -85.75992749999999
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "0.2 mi",
+                "value": 303
+              },
+              "duration": {
+                "text": "4 mins",
+                "value": 245
+              },
+              "end_location": {
+                "lat": 38.2161865,
+                "lng": -85.75943439999999
+              },
+              "html_instructions": "Turn <b>left</b><div style=\"font-size:0.9em\">Take the stairs</div>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "{qfhFzzljOA@C?CAKAECC?SCa@EUJGBIDEBQJWL{@d@q@EyAGWMOGGCGAWCcAI"
+              },
+              "start_location": {
+                "lat": 38.2135793,
+                "lng": -85.7593359
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "39 ft",
+                "value": 12
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 9
+              },
+              "end_location": {
+                "lat": 38.2161732,
+                "lng": -85.7593023
+              },
+              "html_instructions": "Turn <b>right</b>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "ebghFl{ljOBY"
+              },
+              "start_location": {
+                "lat": 38.2161865,
+                "lng": -85.75943439999999
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "0.1 mi",
+                "value": 219
+              },
+              "duration": {
+                "text": "3 mins",
+                "value": 174
+              },
+              "end_location": {
+                "lat": 38.218133,
+                "lng": -85.759024
+              },
+              "html_instructions": "Turn <b>left</b><div style=\"font-size:0.9em\">Destination will be on the right</div>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "abghFrzljOaBK_@EMA{@Gc@Ec@C_@EcAGOC"
+              },
+              "start_location": {
+                "lat": 38.2161732,
+                "lng": -85.7593023
               },
               "travel_mode": "WALKING"
             }
@@ -103,9 +246,9 @@
         }
       ],
       "overview_polyline": {
-        "points": "cpfhFxcmjOC`@ORIb@"
+        "points": "cpfhFxcmjOBc@IKE[EYIG?EDo@MAQA?IFgA?MGQACA@GAi@Ia@EUJQHkBbAkCMg@UOE{AMBYaBKm@GcDWsAK"
       },
-      "summary": "",
+      "summary": "Eastern Pkwy",
       "warnings": [
         "Walking directions are in beta. Use caution \u2013 This route may be missing sidewalks or pedestrian paths."
       ],

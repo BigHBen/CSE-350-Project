@@ -14,7 +14,7 @@
 
         new google.maps.DirectionsService().route({
             origin: new google.maps.LatLng(38.213223, -85.760789),
-            destination: new google.maps.LatLng(38.213462, -85.761228),
+            destination: new google.maps.LatLng(38.218106, -85.758694),
             travelMode: "WALKING"
         }, function(response, status) {
             if (status == google.maps.DirectionsStatus.OK) {
@@ -77,6 +77,22 @@
                      class="home-cardinal-icon"
                      />
                   <h1 class="home-text">CardsBestRoute</h1>
+                  <div class="popup" onclick="myFunction()">Steps
+                    <span class="popuptext" id="myPopup">
+                        <div class="popup-textlist">
+                           <ol>
+                               <li>Head <b>east</b> 56 ft</li>
+<li>Slight <b>left</b> toward <b>Eastern Pkwy</b> 148 ft</li>
+<li>Turn <b>right</b> onto <b>Eastern Pkwy</b> 82 ft</li>
+<li>Turn <b>left</b> toward <b>Eastern Pkwy</b> 26 ft</li>
+<li>Turn <b>right</b> onto <b>Eastern Pkwy</b> 171 ft</li>
+<li>Turn <b>left</b><div style="font-size:0.9em">Take the stairs</div> 0.2 mi</li>
+<li>Turn <b>right</b> 39 ft</li>
+<li>Turn <b>left</b><div style="font-size:0.9em">Destination will be on the right</div> 0.1 mi</li>
+                           </ol>
+                        </div>
+                    </span>
+                  </div>
                </div>
                <div class="home-start">
                   <form action=/Form method="POST">
@@ -130,7 +146,7 @@
                      </button>
                   </form>
                </div>
-               <div class="results">Your walk will cover 144 ft and will take a total time of 1 min.</div>
+               <div class="results">Your walk will cover 0.4 mi and will take a total time of 10 mins.</div>
             </nav>
             <nav class="home-credits">
             <span class="home-text18">Hilton Benson, Morgan Taylor, Emujin Zolbayar, Hadey Chaker&nbsp;</span>
@@ -144,5 +160,12 @@
    <script src="{{ url_for('static', filename='script.js') }}"></script>
    <script src="{{ url_for('static', filename='script2.js') }}"></script>
    <script src="{{ url_for('static', filename='script3.js') }}"></script>
+   <script>
+        // When the user clicks on <div>, open the popup
+        function myFunction() {
+          var popup = document.getElementById("myPopup");
+          popup.classList.toggle("show");
+        }
+   </script>
 </body>
 </html>
