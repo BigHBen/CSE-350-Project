@@ -5,3 +5,4 @@ CardsBestRoute/Datasets/campus_matrix.csv
 campus_matrix.csv
 map.html
 CardsBestRoute/templates/cse 350 project-html/map.html
+CardsBestRoute/templates/cse 350 project-html/directions.json
