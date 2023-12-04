@@ -12,9 +12,83 @@
             center: new google.maps.LatLng(38.216901, -85.759215)
         });
 
+        new google.maps.Polyline({
+            clickable: false,
+            geodesic: true,
+            strokeColor: "#FFA500",
+            strokeOpacity: 1.000000,
+            strokeWeight: 7,
+            map: map,
+            path: [
+                new google.maps.LatLng(38.217526, -85.755346),
+                new google.maps.LatLng(38.217801, -85.755574),
+                new google.maps.LatLng(38.217801, -85.755574),
+                new google.maps.LatLng(38.217626, -85.755906),
+                new google.maps.LatLng(38.217626, -85.755906),
+                new google.maps.LatLng(38.217418, -85.756256),
+                new google.maps.LatLng(38.217418, -85.756256),
+                new google.maps.LatLng(38.217452, -85.756621),
+                new google.maps.LatLng(38.217452, -85.756621),
+                new google.maps.LatLng(38.217486, -85.756937),
+                new google.maps.LatLng(38.217486, -85.756937),
+                new google.maps.LatLng(38.217549, -85.757501),
+                new google.maps.LatLng(38.217549, -85.757501),
+                new google.maps.LatLng(38.217574, -85.757710),
+                new google.maps.LatLng(38.217574, -85.757710),
+                new google.maps.LatLng(38.217621, -85.758311),
+                new google.maps.LatLng(38.217621, -85.758311),
+                new google.maps.LatLng(38.217374, -85.758600),
+                new google.maps.LatLng(38.217374, -85.758600),
+                new google.maps.LatLng(38.217098, -85.758871),
+                new google.maps.LatLng(38.217098, -85.758871),
+                new google.maps.LatLng(38.217187, -85.759187),
+                new google.maps.LatLng(38.217187, -85.759187),
+                new google.maps.LatLng(38.217052, -85.759407),
+                new google.maps.LatLng(38.217052, -85.759407),
+                new google.maps.LatLng(38.216917, -85.759837),
+            ]
+        });
+
+        new google.maps.Polyline({
+            clickable: false,
+            geodesic: true,
+            strokeColor: "#FF0000",
+            strokeOpacity: 1.000000,
+            strokeWeight: 7,
+            map: map,
+            path: [
+                new google.maps.LatLng(38.217526, -85.755346),
+                new google.maps.LatLng(38.217801, -85.755574),
+                new google.maps.LatLng(38.217801, -85.755574),
+                new google.maps.LatLng(38.217626, -85.755906),
+                new google.maps.LatLng(38.217626, -85.755906),
+                new google.maps.LatLng(38.217418, -85.756256),
+                new google.maps.LatLng(38.217418, -85.756256),
+                new google.maps.LatLng(38.217452, -85.756621),
+                new google.maps.LatLng(38.217452, -85.756621),
+                new google.maps.LatLng(38.217486, -85.756937),
+                new google.maps.LatLng(38.217486, -85.756937),
+                new google.maps.LatLng(38.217549, -85.757501),
+                new google.maps.LatLng(38.217549, -85.757501),
+                new google.maps.LatLng(38.217574, -85.757710),
+                new google.maps.LatLng(38.217574, -85.757710),
+                new google.maps.LatLng(38.217621, -85.758311),
+                new google.maps.LatLng(38.217621, -85.758311),
+                new google.maps.LatLng(38.217374, -85.758600),
+                new google.maps.LatLng(38.217374, -85.758600),
+                new google.maps.LatLng(38.217098, -85.758871),
+                new google.maps.LatLng(38.217098, -85.758871),
+                new google.maps.LatLng(38.217187, -85.759187),
+                new google.maps.LatLng(38.217187, -85.759187),
+                new google.maps.LatLng(38.217052, -85.759407),
+                new google.maps.LatLng(38.217052, -85.759407),
+                new google.maps.LatLng(38.216917, -85.759837),
+            ]
+        });
+
         new google.maps.DirectionsService().route({
-            origin: new google.maps.LatLng(38.213223, -85.760789),
-            destination: new google.maps.LatLng(38.218106, -85.758694),
+            origin: new google.maps.LatLng(38.217526, -85.755346),
+            destination: new google.maps.LatLng(38.216917, -85.759837),
             travelMode: "WALKING"
         }, function(response, status) {
             if (status == google.maps.DirectionsStatus.OK) {
@@ -81,14 +155,18 @@
                     <span class="popuptext" id="myPopup">
                         <div class="popup-textlist">
                            <ol>
-                               <li>Head <b>east</b> 56 ft</li>
-<li>Slight <b>left</b> toward <b>Eastern Pkwy</b> 148 ft</li>
-<li>Turn <b>right</b> onto <b>Eastern Pkwy</b> 82 ft</li>
-<li>Turn <b>left</b> toward <b>Eastern Pkwy</b> 26 ft</li>
-<li>Turn <b>right</b> onto <b>Eastern Pkwy</b> 171 ft</li>
-<li>Turn <b>left</b><div style="font-size:0.9em">Take the stairs</div> 0.2 mi</li>
-<li>Turn <b>right</b> 39 ft</li>
-<li>Turn <b>left</b><div style="font-size:0.9em">Destination will be on the right</div> 0.1 mi</li>
+                               <li>Head <b>southeast</b> toward <b>S Floyd St</b> 118 ft</li>
+<li>Turn <b>left</b> toward <b>S Floyd St</b> 98 ft</li>
+<li>Turn <b>right</b> onto <b>S Floyd St</b> 0.1 mi</li>
+<li>Turn <b>right</b> toward <b>University Blvd</b> 0.1 mi</li>
+<li>Turn <b>right</b> onto <b>University Blvd</b> 367 ft</li>
+<li>Turn <b>right</b> 85 ft</li>
+<li>Turn <b>right</b> 495 ft</li>
+<li>Turn <b>right</b> 23 ft</li>
+<li>Turn <b>left</b> 213 ft</li>
+<li>Turn <b>right</b> 180 ft</li>
+<li>Turn <b>left</b> 197 ft</li><li>Your walk will cover 0.6 mi and will take a total time of 12 mins.
+Shortcut: Your walk will cover 0.46143173386461056 mi and will take a total time of 0:04:37.970924.</li>
                            </ol>
                         </div>
                     </span>
@@ -146,7 +224,7 @@
                      </button>
                   </form>
                </div>
-               <div class="results">Your walk will cover 0.4 mi and will take a total time of 10 mins.</div>
+               
             </nav>
             <nav class="home-credits">
             <span class="home-text18">Hilton Benson, Morgan Taylor, Emujin Zolbayar, Hadey Chaker&nbsp;</span>
@@ -156,7 +234,7 @@
          </div>
       </div>
    </div>
-   <script src="{{ url_for('static', filename='suggestions.js') }}"></script>
+   <script src="{{ url_for('static', filename='suggestions_demo.js') }}"></script>
    <script src="{{ url_for('static', filename='script.js') }}"></script>
    <script src="{{ url_for('static', filename='script2.js') }}"></script>
    <script src="{{ url_for('static', filename='script3.js') }}"></script>

@@ -9,13 +9,13 @@ def Search(s, e):
     StartDestination, EndDestination = name_to_point(s, e)
     print("Start: " + StartDestination + '|' + " End: " + EndDestination)
     try:
-        dataset = r.initialization()  # Create set of Locations
-        matrix = r.generate_Matrix(dataset)  # Create distance matrix
+        dataset = r.initialization("Datasets/Ekstrom-to-SAC.csv")  # Create set of Locations
+        matrix = r.generate_Matrix(dataset, "Datasets/Demo_Edges.csv")  # Create distance matrix
         df = pd.DataFrame(matrix)
         df.to_csv("Datasets/campus_matrix.csv", header=False, index=False)  # Output matrix to CSV (for testing)
-
         g = nx.from_numpy_array(matrix)
         solution = r.Dijkstra(g, int(StartDestination), int(EndDestination))
+
         output = 'Path 1: {0} \nPath 2: {1}'
         output_paths = (getattr(solution[0], "pathstring"), getattr(solution[1], "pathstring"))
         print(output.format(*output_paths))
@@ -30,7 +30,7 @@ def Search(s, e):
 # Convert building name to Location id
 def name_to_point(start, end):
     startpoint, endpoint = 0, 0
-    df = pd.read_csv("Datasets/BelknapPoints.csv")
+    df = pd.read_csv("Datasets/Ekstrom-to-SAC.csv")
     namelist = df["description"].tolist()
     pointlist = df["name"].tolist()
     for building_name in range(len(namelist)):  # Find Location id

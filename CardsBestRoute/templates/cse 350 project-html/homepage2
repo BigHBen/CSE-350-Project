@@ -86,7 +86,7 @@
          </div>
       </div>
    </div>
-   <script src="{{ url_for('static', filename='suggestions.js') }}"></script>
+   <script src="{{ url_for('static', filename='suggestions_demo.js') }}"></script>
    <script src="{{ url_for('static', filename='script.js') }}"></script>
    <script src="{{ url_for('static', filename='script2.js') }}"></script>
    <script src="{{ url_for('static', filename='script3.js') }}"></script>

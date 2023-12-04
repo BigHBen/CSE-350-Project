@@ -11,14 +11,18 @@ from html.parser import HTMLParser
 import math
 import requests
 import json
+import datetime
 
 # Create the map plotter:
 apikey = open("Datasets/apikey.txt", "r").read()  # (your API key here)
 
+s_dist: float
+s_time: str
+
 
 # Extract location points from dataset
-def initialization():
-    df = pd.read_csv("Datasets/BelknapPoints.csv")
+def initialization(data_points):
+    df = pd.read_csv(data_points)
     pointlist, namelist = df["WKT"].tolist(), df["name"].tolist()
     jbcoords, ids, jblats, jblngs, dataset = [], [], [], [], []
 
@@ -38,13 +42,13 @@ def initialization():
     return dataset  # List of Locations
 
 
-dataset = initialization()
+dataset = initialization("Datasets/Ekstrom-to-SAC.csv")
 path_data = []
 
 
 # Create adjacency matrix
-def generate_Matrix(data):
-    df = pd.read_csv("Datasets/Edges.csv")
+def generate_Matrix(data, edge_list):
+    df = pd.read_csv(edge_list)
     edge_list = (df["start-node"].tolist(), df["end-node"].tolist())
     size = (len(data) + 2, len(data) + 2)
     matrix = np.zeros(size)  # Initialize matrix
@@ -60,7 +64,7 @@ def generate_Matrix(data):
             if getattr(y, "id") == index2:
                 c2 = (getattr(y, "x"), getattr(y, "y"))
                 break
-        matrix[index1][index2] = geopy.distance.geodesic(c1, c2).km  # Distance
+        matrix[index1][index2] = geopy.distance.geodesic(c1, c2).mi  # Distance
     return matrix
 
 
@@ -90,28 +94,43 @@ def get_Distance(d, path):
 
 # Dijkstra's Algorithm - Find the shortest paths - Credit to
 def Dijkstra(graph, start, end):
-    path, paths, dist_list, final_path, second_path = [], [], [], [], []
+    path, paths, dist_list, final_path, second_path, temp = [], [], [], [], [], []
     queue = [(start, end, path)]
+    tempdist = 1000.0
+    min_list = 1000.0
+    global s_dist
+    global s_time
     while queue:
         start, end, path = queue.pop()
         # print('PATH', path)
 
         path = path + [start]
+        temp = path
         if start == end:
             paths.append(path)
         for node in set(graph[start]).difference(path):
             queue.append((node, end, path))
-
+    print("algorithm finished | # of possible paths generated: " + str(len(paths)))
     for path in paths:  # Retrieve total distance of each path
-        dist_list.append(get_Distance(dataset, path))
-    dist_list.sort()
-    lowest, second_lowest = min(dist_list), min(dist_list)
-    print("Lowest distance: " + str(min(dist_list)))
-    for dist in dist_list:  # 2nd shortest route
-        if dist != min(dist_list):
-            print("Second Lowest distance: " + str(distance))
-            second_lowest = distance
-            break
+        path_d = get_Distance(dataset, path)
+        # dist_list.append(path_d)
+        # print("Current dist_sum from path: " + str(path_d))
+        if path_d < tempdist:
+            min_list = path_d
+            # print("Minimum Distance: " + str(min_list))
+            tempdist = path_d
+    # dist_list.sort()
+    # lowest, second_lowest = min(dist_list), min(dist_list)
+    lowest, second_lowest = min_list, min_list
+    # print("Lowest distance: " + str(min(dist_list)))
+    print("Lowest distance: " + str(min_list))
+    moderate_velocity = 0.00166  # walking speed - mi/s
+    shortcut_time = min_list / moderate_velocity
+
+    s_dist = min_list
+    s_time = str(datetime.timedelta(seconds=shortcut_time))
+
+    print("Shortcut(Path 1) time: " + s_time)
     for paths in path_data:
         if getattr(paths, "c") == lowest:
             final_path = paths  # Locate shortest path object (for attribute use)
@@ -134,8 +153,8 @@ def DrawRoute(path1, path2, map_file):
         p1[-1],
         travel_mode='Walking'
     )
-    # gmap.plot(lat2, lon2, edge_width=7, color="orange")
-    # gmap.plot(lat1, lon1, edge_width=7, color="red")
+    gmap.plot(lat2, lon2, edge_width=7, color="orange")  # Algorithm Results
+    gmap.plot(lat1, lon1, edge_width=7, color="red")  # Algorithm Results
     gmap.draw(map_file)
     # print(getattr(path1, "coords"))
     Map_Changes(map_file)
@@ -193,7 +212,9 @@ def DirectionsJSON(p):
         step_string = "<li>{0}</li>".format(step_string)
         instructions.append(step_string)
     f.close()  # Closing file
-    s = str("Your walk will cover " + dist + " and will take a total time of " + duration + ".")
+    s = str("Your walk will cover " + dist + " and will take a total time of " + duration + "." + "\n" +
+            "Shortcut: Your walk will cover " + str(s_dist) + " mi and will take a total time of " + s_time + ".")
+    # s2 = str()
 
     # Add results to html
     with open(map_html, 'r') as file:  # r to open file in READ mode
@@ -204,11 +225,12 @@ def DirectionsJSON(p):
         print(replaced_steps)
         map_content = map_content.replace(
             '<div class="results">Sup</div>',
-            replaced_content
+            # replaced_content
+            '',
         )
         step_content = map_content.replace(
             '<li>Step1</li>',
-            replaced_steps
+            replaced_steps + ('<li>'+s+'</li>')
         )
     open(map_html, 'w').write(map_content)
     open(map_html, 'w').write(step_content)

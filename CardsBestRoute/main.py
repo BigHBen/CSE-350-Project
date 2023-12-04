@@ -13,6 +13,7 @@ import gmplot  # Google Maps API
 import numpy as np  # To create distance matrix for routes
 import geopy.distance  # To calculate distances between coordinates
 from bs4 import BeautifulSoup  # Make sure to install beautifulsoup4 package
+
 # ^^ Start using all the regular flask logic ^^
 
 app = Flask(__name__)  # Initiate flask app
@@ -21,9 +22,15 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 startpoint = []
 endpoint = []
 
+
 @app.route("/", methods=["POST", "GET"])  # Define what happens on the home page
 def map_html():  # Function can really be named anything
     return render_template('cse 350 project-html/map_base.html')  # Define function for QtWebEngine
+
+
+@app.route("/start", methods=["POST", "GET"])
+def device_page():
+    return render_template('cse 350 project-html/device.html')
 
 
 @app.route('/favicon.ico')
@@ -57,6 +64,7 @@ def ui(location):  # Initiate PyQT5 app
     web.setWindowTitle("CardsBestRoute")  # Rename to change your window name.
     # ^ This cannot change between pages
     web.resize(1440, 900)  # Set a size
+    # web.resize(720, 1280)  # Set a size
     web.setZoomFactor(1.5)  # Enlarge your content to fit screen
     web.load(QUrl(location))  # Load Home page at startup
     web.show()  # Show the window

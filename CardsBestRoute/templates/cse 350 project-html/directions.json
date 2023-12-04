@@ -2,16 +2,19 @@
   "geocoded_waypoints": [
     {
       "geocoder_status": "OK",
-      "place_id": "ChIJXbOTI2QNaYgRb-n2ETvci9g",
+      "place_id": "ChIJ58ydamgNaYgRKymaxHUvfBM",
       "types": [
-        "street_address"
+        "establishment",
+        "point_of_interest"
       ]
     },
     {
       "geocoder_status": "OK",
-      "place_id": "ChIJO5bum2cNaYgRwqoq9ATzuCk",
+      "place_id": "ChIJGc4G1mANaYgRbgQ46NeoEjM",
       "types": [
-        "street_address"
+        "establishment",
+        "library",
+        "point_of_interest"
       ]
     }
   ],
@@ -19,224 +22,296 @@
     {
       "bounds": {
         "northeast": {
-          "lat": 38.218133,
-          "lng": -85.759024
+          "lat": 38.2172955,
+          "lng": -85.75480999999999
         },
         "southwest": {
-          "lat": 38.2132789,
-          "lng": -85.76077409999999
+          "lat": 38.2147221,
+          "lng": -85.75982909999999
         }
       },
       "copyrights": "Map data \u00a92023 Google",
       "legs": [
         {
           "distance": {
-            "text": "0.4 mi",
-            "value": 681
+            "text": "0.6 mi",
+            "value": 889
           },
           "duration": {
-            "text": "10 mins",
-            "value": 588
+            "text": "12 mins",
+            "value": 731
           },
-          "end_address": "2010 S 1st St, Louisville, KY 40208, USA",
+          "end_address": "2215 S 3rd St, Louisville, KY 40208, USA",
           "end_location": {
-            "lat": 38.218133,
-            "lng": -85.759024
+            "lat": 38.2169134,
+            "lng": -85.759829
           },
-          "start_address": "220 Eastern Pkwy, Louisville, KY 40208, USA",
+          "start_address": "2100 S Floyd St, Louisville, KY 40208, USA",
           "start_location": {
-            "lat": 38.2132987,
-            "lng": -85.76077409999999
+            "lat": 38.2172955,
+            "lng": -85.755371
           },
           "steps": [
             {
               "distance": {
-                "text": "56 ft",
-                "value": 17
-              },
-              "duration": {
-                "text": "1 min",
-                "value": 13
-              },
-              "end_location": {
-                "lat": 38.2132789,
-                "lng": -85.7605861
-              },
-              "html_instructions": "Head <b>east</b>",
-              "polyline": {
-                "points": "cpfhFxcmjO@U@M"
-              },
-              "start_location": {
-                "lat": 38.2132987,
-                "lng": -85.76077409999999
-              },
-              "travel_mode": "WALKING"
-            },
-            {
-              "distance": {
-                "text": "148 ft",
-                "value": 45
-              },
-              "duration": {
-                "text": "1 min",
+                "text": "118 ft",
                 "value": 36
               },
-              "end_location": {
-                "lat": 38.2134392,
-                "lng": -85.7602193
+              "duration": {
+                "text": "1 min",
+                "value": 28
               },
-              "html_instructions": "Slight <b>left</b> toward <b>Eastern Pkwy</b>",
-              "maneuver": "turn-slight-left",
+              "end_location": {
+                "lat": 38.2170587,
+                "lng": -85.7551019
+              },
+              "html_instructions": "Head <b>southeast</b> toward <b>S Floyd St</b>",
               "polyline": {
-                "points": "_pfhFtbmjOEECE?AACAGAMAMCKIG"
+                "points": "cighF`bljO@E@EBEf@c@"
               },
               "start_location": {
-                "lat": 38.2132789,
-                "lng": -85.7605861
+                "lat": 38.2172955,
+                "lng": -85.755371
               },
               "travel_mode": "WALKING"
             },
             {
               "distance": {
-                "text": "82 ft",
-                "value": 25
+                "text": "98 ft",
+                "value": 30
               },
               "duration": {
                 "text": "1 min",
-                "value": 20
+                "value": 24
               },
               "end_location": {
-                "lat": 38.2134124,
-                "lng": -85.75995259999999
+                "lat": 38.2170224,
+                "lng": -85.75480999999999
               },
-              "html_instructions": "Turn <b>right</b> onto <b>Eastern Pkwy</b>",
-              "maneuver": "turn-right",
-              "polyline": {
-                "points": "_qfhFj`mjO?EDo@"
-              },
-              "start_location": {
-                "lat": 38.2134392,
-                "lng": -85.7602193
-              },
-              "travel_mode": "WALKING"
-            },
-            {
-              "distance": {
-                "text": "26 ft",
-                "value": 8
-              },
-              "duration": {
-                "text": "1 min",
-                "value": 27
-              },
-              "end_location": {
-                "lat": 38.2135741,
-                "lng": -85.75992749999999
-              },
-              "html_instructions": "Turn <b>left</b> toward <b>Eastern Pkwy</b>",
+              "html_instructions": "Turn <b>left</b> toward <b>S Floyd St</b>",
               "maneuver": "turn-left",
               "polyline": {
-                "points": "ypfhFt~ljOMAQA"
+                "points": "sgghFj`ljOFy@"
               },
               "start_location": {
-                "lat": 38.2134124,
-                "lng": -85.75995259999999
-              },
-              "travel_mode": "WALKING"
-            },
-            {
-              "distance": {
-                "text": "171 ft",
-                "value": 52
-              },
-              "duration": {
-                "text": "1 min",
-                "value": 64
-              },
-              "end_location": {
-                "lat": 38.2135793,
-                "lng": -85.7593359
-              },
-              "html_instructions": "Turn <b>right</b> onto <b>Eastern Pkwy</b>",
-              "maneuver": "turn-right",
-              "polyline": {
-                "points": "yqfhFp~ljO?IDw@@O?MGQAC"
-              },
-              "start_location": {
-                "lat": 38.2135741,
-                "lng": -85.75992749999999
-              },
-              "travel_mode": "WALKING"
-            },
-            {
-              "distance": {
-                "text": "0.2 mi",
-                "value": 303
-              },
-              "duration": {
-                "text": "4 mins",
-                "value": 245
-              },
-              "end_location": {
-                "lat": 38.2161865,
-                "lng": -85.75943439999999
-              },
-              "html_instructions": "Turn <b>left</b><div style=\"font-size:0.9em\">Take the stairs</div>",
-              "maneuver": "turn-left",
-              "polyline": {
-                "points": "{qfhFzzljOA@C?CAKAECC?SCa@EUJGBIDEBQJWL{@d@q@EyAGWMOGGCGAWCcAI"
-              },
-              "start_location": {
-                "lat": 38.2135793,
-                "lng": -85.7593359
-              },
-              "travel_mode": "WALKING"
-            },
-            {
-              "distance": {
-                "text": "39 ft",
-                "value": 12
-              },
-              "duration": {
-                "text": "1 min",
-                "value": 9
-              },
-              "end_location": {
-                "lat": 38.2161732,
-                "lng": -85.7593023
-              },
-              "html_instructions": "Turn <b>right</b>",
-              "maneuver": "turn-right",
-              "polyline": {
-                "points": "ebghFl{ljOBY"
-              },
-              "start_location": {
-                "lat": 38.2161865,
-                "lng": -85.75943439999999
+                "lat": 38.2170587,
+                "lng": -85.7551019
               },
               "travel_mode": "WALKING"
             },
             {
               "distance": {
                 "text": "0.1 mi",
-                "value": 219
+                "value": 173
               },
               "duration": {
-                "text": "3 mins",
-                "value": 174
+                "text": "2 mins",
+                "value": 142
               },
               "end_location": {
-                "lat": 38.218133,
-                "lng": -85.759024
+                "lat": 38.2154807,
+                "lng": -85.7550115
               },
-              "html_instructions": "Turn <b>left</b><div style=\"font-size:0.9em\">Destination will be on the right</div>",
+              "html_instructions": "Turn <b>right</b> onto <b>S Floyd St</b>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "kgghFp~kjOnEb@REF@fAF"
+              },
+              "start_location": {
+                "lat": 38.2170224,
+                "lng": -85.75480999999999
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "0.1 mi",
+                "value": 174
+              },
+              "duration": {
+                "text": "2 mins",
+                "value": 141
+              },
+              "end_location": {
+                "lat": 38.2147221,
+                "lng": -85.756062
+              },
+              "html_instructions": "Turn <b>right</b> toward <b>University Blvd</b>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "w}fhFx_ljOGbAEl@CZ?J?B@D?BBB@@B@bAHXDB@D@JDBBD?^B"
+              },
+              "start_location": {
+                "lat": 38.2154807,
+                "lng": -85.7550115
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "367 ft",
+                "value": 112
+              },
+              "duration": {
+                "text": "2 mins",
+                "value": 94
+              },
+              "end_location": {
+                "lat": 38.21485870000001,
+                "lng": -85.75733540000002
+              },
+              "html_instructions": "Turn <b>right</b> onto <b>University Blvd</b>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "_yfhFjfljOAL?FAHAPANM`CAPCh@"
+              },
+              "start_location": {
+                "lat": 38.2147221,
+                "lng": -85.756062
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "85 ft",
+                "value": 26
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 23
+              },
+              "end_location": {
+                "lat": 38.2149426,
+                "lng": -85.757539
+              },
+              "html_instructions": "Turn <b>right</b>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "{yfhFjnljOAAA@A?A?A??@A?A@A@A@?@A@?@?@?@A??@?@?@?@?@@@?@?@@@?@@@"
+              },
+              "start_location": {
+                "lat": 38.21485870000001,
+                "lng": -85.75733540000002
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "495 ft",
+                "value": 151
+              },
+              "duration": {
+                "text": "2 mins",
+                "value": 128
+              },
+              "end_location": {
+                "lat": 38.2160176,
+                "lng": -85.7585732
+              },
+              "html_instructions": "Turn <b>right</b>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "kzfhFroljOWRUPo@j@o@l@GDk@f@OLAFCH"
+              },
+              "start_location": {
+                "lat": 38.2149426,
+                "lng": -85.757539
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "23 ft",
+                "value": 7
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 6
+              },
+              "end_location": {
+                "lat": 38.2160813,
+                "lng": -85.7585646
+              },
+              "html_instructions": "Turn <b>right</b>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "caghF`vljOKA"
+              },
+              "start_location": {
+                "lat": 38.2160176,
+                "lng": -85.7585732
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "213 ft",
+                "value": 65
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 55
+              },
+              "end_location": {
+                "lat": 38.2161732,
+                "lng": -85.7593023
+              },
+              "html_instructions": "Turn <b>left</b>",
               "maneuver": "turn-left",
               "polyline": {
-                "points": "abghFrzljOaBK_@EMA{@Gc@Ec@C_@EcAGOC"
+                "points": "oaghF~uljOEh@El@Cj@AN"
+              },
+              "start_location": {
+                "lat": 38.2160813,
+                "lng": -85.7585646
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "180 ft",
+                "value": 55
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 43
+              },
+              "end_location": {
+                "lat": 38.2166615,
+                "lng": -85.7592391
+              },
+              "html_instructions": "Turn <b>right</b>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "abghFrzljOaBK"
               },
               "start_location": {
                 "lat": 38.2161732,
                 "lng": -85.7593023
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "197 ft",
+                "value": 60
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 47
+              },
+              "end_location": {
+                "lat": 38.2169134,
+                "lng": -85.759829
+              },
+              "html_instructions": "Turn <b>left</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "ceghFfzljOEPCHKVGLCHCDABAFCRA@?@A?"
+              },
+              "start_location": {
+                "lat": 38.2166615,
+                "lng": -85.7592391
               },
               "travel_mode": "WALKING"
             }
@@ -246,9 +321,9 @@
         }
       ],
       "overview_polyline": {
-        "points": "cpfhFxcmjOBc@IKE[EYIG?EDo@MAQA?IFgA?MGQACA@GAi@Ia@EUJQHkBbAkCMg@UOE{AMBYaBKm@GcDWsAK"
+        "points": "cighF`bljOFQf@c@Fy@nEb@REnAHMpBAp@HJ|ANHBNHd@BEp@UlEC?E@IHANBF@Bm@d@sCfCQTCHKAKvAEz@aBKEPO`@Q`@I^"
       },
-      "summary": "Eastern Pkwy",
+      "summary": "S Floyd St",
       "warnings": [
         "Walking directions are in beta. Use caution \u2013 This route may be missing sidewalks or pedestrian paths."
       ],
