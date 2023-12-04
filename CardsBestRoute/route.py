@@ -124,8 +124,8 @@ def Dijkstra(graph, start, end):
     lowest, second_lowest = min_list, min_list
     # print("Lowest distance: " + str(min(dist_list)))
     print("Lowest distance: " + str(min_list))
-    moderate_velocity = 0.00166  # walking speed - mi/s
-    shortcut_time = min_list / moderate_velocity
+    moderate_velocity = 0.0008823471  # average walking speed - mi/s
+    shortcut_time = min_list / moderate_velocity  # time = minimum dist (miles) / average walking pace (mi/s)
 
     s_dist = min_list
     s_time = str(datetime.timedelta(seconds=shortcut_time))
@@ -212,9 +212,9 @@ def DirectionsJSON(p):
         step_string = "<li>{0}</li>".format(step_string)
         instructions.append(step_string)
     f.close()  # Closing file
-    s = str("Your walk will cover " + dist + " and will take a total time of " + duration + "." + "\n" +
-            "Shortcut: Your walk will cover " + str(s_dist) + " mi and will take a total time of " + s_time + ".")
-    # s2 = str()
+    s = str("Your walk will cover " + dist + " and will take a total time of " + duration + ".")
+
+    s2 = str("Your walk will cover " + str(s_dist) + " mi and will take a total time of " + s_time + ".")
 
     # Add results to html
     with open(map_html, 'r') as file:  # r to open file in READ mode
@@ -230,8 +230,12 @@ def DirectionsJSON(p):
         )
         step_content = map_content.replace(
             '<li>Step1</li>',
-            replaced_steps + ('<li>'+s+'</li>')
+            replaced_steps + s
+        )
+        shortcut_content = step_content.replace(
+            '<h1>This is temporary</h1>',
+            s2
         )
     open(map_html, 'w').write(map_content)
-    open(map_html, 'w').write(step_content)
+    open(map_html, 'w').write(shortcut_content)
     print("Your walk will cover " + dist + " and will take a total time of " + duration + ".")

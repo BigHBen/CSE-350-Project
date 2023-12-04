@@ -271,3 +271,47 @@ body {
   from {opacity: 0;}
   to {opacity:1 ;}
 }
+
+.shortcut {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width:100px;
+  height:50px;
+  background:#FFFFFF;
+  border-radius:var(--dl-radius-radius-radius8);
+  color:#282424;font-size:20px;margin-bottom:0;
+  text-align:center;
+  padding:12px;
+  align-self:center;
+  margin-left:var(--dl-space-space-unit);
+  margin-right:var(--dl-space-space-unit);
+}
+
+/* The actual popup (appears on top) */
+.shortcut .shortcut_box {
+  visibility: hidden;
+  width: 65vw;
+  height: 20vh;
+  background:darkslategray;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  top: -80%;
+  left: 200%;
+  margin-left: -80px;
+}
+
+.shortcut-text {
+  margin-left: var(--dl-space-space-unit);
+  margin-top: var(--dl-space-space-halfunit);
+}
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.shortcut .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}

@@ -76,6 +76,13 @@
                      </button>
                   </form>
                </div>
+               <div class="shortcut" onclick="myFunction2()">Shortcut
+                    <span class="shortcut_box" id="myShortcut">
+                        <div class="shortcut-text">
+                           <h1>This is temporary</h1>
+                        </div>
+                    </span>
+              </div>
                <div class="results">Sup</div>
             </nav>
             <nav class="home-credits">
@@ -92,9 +99,16 @@
    <script src="{{ url_for('static', filename='script3.js') }}"></script>
    <script>
         // When the user clicks on <div>, open the popup
+        var popup = document.getElementById("myPopup");
+        var shortcut = document.getElementById("myShortcut");
         function myFunction() {
-          var popup = document.getElementById("myPopup");
           popup.classList.toggle("show");
+          shortcut.classList.remove("show");
+        }
+
+        function myFunction2() {
+          shortcut.classList.toggle("show");
+          popup.classList.remove("show");
         }
    </script>
 </body>
