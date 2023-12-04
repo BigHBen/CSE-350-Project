@@ -23,13 +23,15 @@ startpoint = []
 endpoint = []
 
 
-@app.route("/", methods=["POST", "GET"])  # Define what happens on the home page
+@app.route("/start", methods=["POST", "GET"])  # Define what happens on the home page
 def map_html():  # Function can really be named anything
     return render_template('cse 350 project-html/map_base.html')  # Define function for QtWebEngine
+    # return render_template('cse 350 project-html/homepage.html')
 
 
-@app.route("/start", methods=["POST", "GET"])
+@app.route("/", methods=["POST", "GET"])
 def device_page():
+
     return render_template('cse 350 project-html/device.html')
 
 
@@ -55,6 +57,7 @@ def Form():
     else:
         print("wrong input -> output default map")
         return render_template('cse 350 project-html/map_base.html')
+        # return render_template('cse 350 project-html/homepage.html')
 
 
 def ui(location):  # Initiate PyQT5 app

@@ -1,8 +1,46 @@
-<body style="background-color:hsl(0,100%,50%)>
-<div>
-  <link href="../../static/device_home.css" rel="stylesheet" />
-  <div class="home-container">
-    <button type="button" class="home-button button">Button</button>
-    <button type="button" class="home-button1 button">Button</button>
+<head>
+  <link rel="stylesheet" href="../../static/device_home.css">
+  <style>
+        body {
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes fadeInAnimation {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+    </style>
+</head>
+
+
+<body>
+  <div class="container container--inverted">
+    <p>Choose a Device:</p>
+
+    <button class="button button--inverted" id="desktop" type="button" onclick="changeBg(this);">Desktop</button>
+    <button class="button button--inverted" id="mobile" type="button" >Mobile</button>
   </div>
-</div>
+  <script>
+    const pane = document.querySelector('.container--inverted');
+    const delay = ms => new Promise(res => setTimeout(res, ms));
+        function changeBg(button){
+
+            if(button.id === "desktop"){
+              console.log("Clicking")
+              pane.classList.toggle('open');
+              yourFunction();
+              //window.location.replace('/start');
+            }
+        }
+        const yourFunction = async () => {
+          await delay(500);
+          console.log("Waited 5s");
+          window.location.replace('/start');
+        };
+      </script>
+</body>

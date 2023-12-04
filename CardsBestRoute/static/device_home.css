@@ -1,23 +1,92 @@
-.home-container {
-  width: 100%;
+/*
+  =====================================
+  Reset and layout stuff
+  (unrelated to demo)
+  =====================================
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
   display: flex;
-  overflow: auto;
+  flex-wrap: wrap;
   min-height: 100vh;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  background-color: #282424;
+  font-family: sans-serif;
+}
+
+
+/*
+  =====================================
+  Container styles
+  =====================================
+*/
+
+.container--inverted {
+  display:grid;
+  gap: 16px;
+  color: cornsilk;
+  background-color: #282424;
+  text-align: center;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  transition: 0.5s all ease;
+}
+
+.container--inverted.open {
+  left: -200%;
+}
+
+
+/*
+  =====================================
+  Button styles
+  =====================================
+*/
+.button {
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+
+  /* match default body styles */
+  font-size: 1.2rem;
+  color: cornsilk;
   background-color: #282424;
 }
-.home-button {
-  width: var(--dl-size-size-xxlarge);
-  align-self: center;
-  border-radius: var(--dl-radius-radius-radius8);
-  margin-bottom: var(--dl-space-space-unit);
-  background-color: var(--dl-color-gray-900);
+
+.button:active {
+  /* Invert bg & text colors when pressed */
+  color: cornsilk;
+  background-color: grey;
 }
-.home-button1 {
-  width: var(--dl-size-size-xxlarge);
-  align-self: center;
-  border-radius: var(--dl-radius-radius-radius8);
-  background-color: var(--dl-color-gray-900);
+
+
+.button--inverted {
+  border-color: darkslategray;
+
+  /* match inverted container */
+  color: cornsilk;
+  background-color: darkslategray;
 }
+
+.button--inverted:active {
+  /* Invert bg & text colors when pressed */
+  color: darkslategray;
+  background-color: grey;
+}
+
+#button--inverted:focus {
+    background-color: green;
+    color: pink;
+}
+
+
