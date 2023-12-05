@@ -12,12 +12,15 @@ import math
 import requests
 import json
 import datetime
+import time
 
 # Create the map plotter:
 apikey = open("Datasets/apikey.txt", "r").read()  # (your API key here)
 
 s_dist: float
 s_time: str
+s_time2: str
+unit: str
 
 
 # Extract location points from dataset
@@ -100,6 +103,8 @@ def Dijkstra(graph, start, end):
     min_list = 1000.0
     global s_dist
     global s_time
+    global s_time2
+    global unit
     while queue:
         start, end, path = queue.pop()
         # print('PATH', path)
@@ -127,8 +132,15 @@ def Dijkstra(graph, start, end):
     moderate_velocity = 0.0008823471  # average walking speed - mi/s
     shortcut_time = min_list / moderate_velocity  # time = minimum dist (miles) / average walking pace (mi/s)
 
-    s_dist = min_list
+    if round(min_list, 1) > 0.1:
+        s_dist = round(min_list, 1)
+        unit = "mi"
+    else:
+        feet = 5280
+        s_dist = round(feet * min_list)
+        unit = "ft"
     s_time = str(datetime.timedelta(seconds=shortcut_time))
+    s_time2 = str(time.strftime("%M", time.gmtime(shortcut_time)))
 
     print("Shortcut(Path 1) time: " + s_time)
     for paths in path_data:
@@ -214,8 +226,10 @@ def DirectionsJSON(p):
     f.close()  # Closing file
     s = str("Your walk will cover " + dist + " and will take a total time of " + duration + ".")
 
-    s2 = str("Your walk will cover " + str(s_dist) + " mi and will take a total time of " + s_time + ".")
-
+    if unit == 'mi':
+        s2 = str("Your walk will cover " + str(s_dist) + " mi and will take a total time of " + s_time2 + " min.")
+    elif unit == 'ft':
+        s2 = str("Your walk will cover " + str(s_dist) + " ft and will take a total time of " + s_time2 + " min.")
     # Add results to html
     with open(map_html, 'r') as file:  # r to open file in READ mode
         html_as_string = file.read()
@@ -230,7 +244,7 @@ def DirectionsJSON(p):
         )
         step_content = map_content.replace(
             '<li>Step1</li>',
-            replaced_steps + s
+            replaced_steps + "\n" + '<li>' + s + '</li>'
         )
         shortcut_content = step_content.replace(
             '<h1>This is temporary</h1>',

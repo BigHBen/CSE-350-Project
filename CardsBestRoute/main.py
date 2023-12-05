@@ -24,7 +24,7 @@ endpoint = []
 
 
 @app.route("/start", methods=["POST", "GET"])  # Define what happens on the home page
-def map_html():  # Function can really be named anything
+def map_html():  #
     return render_template('cse 350 project-html/map_base.html')  # Define function for QtWebEngine
     # return render_template('cse 350 project-html/homepage.html')
 
@@ -67,7 +67,7 @@ def ui(location):  # Initiate PyQT5 app
     web.setWindowTitle("CardsBestRoute")  # Rename to change your window name.
     # ^ This cannot change between pages
     web.resize(1440, 900)  # Set a size
-    # web.resize(720, 1280)  # Set a size
+    # web.resize(720, 1280)  # Mobile size
     web.setZoomFactor(1.5)  # Enlarge your content to fit screen
     web.load(QUrl(location))  # Load Home page at startup
     web.show()  # Show the window

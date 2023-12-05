@@ -280,12 +280,13 @@ body {
   height:50px;
   background:#FFFFFF;
   border-radius:var(--dl-radius-radius-radius8);
-  color:#282424;font-size:20px;margin-bottom:0;
+  color:#282424;font-size:20px;
   text-align:center;
   padding:12px;
   align-self:center;
   margin-left:var(--dl-space-space-unit);
   margin-right:var(--dl-space-space-unit);
+  margin-bottom: 10px;
 }
 
 /* The actual popup (appears on top) */
